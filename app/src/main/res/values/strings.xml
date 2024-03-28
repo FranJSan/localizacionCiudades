@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SÁNCHEZFERNÁNDEZ 12</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title">Localizador de ciudades</string>
+    <string name="msg_error_dialog">Se ha producido un error en la conexión con el servidor. Esto puede deberse a la dirección ip configurada."\nIntroduce la dirección IP del servidor:</string>
+    <string name="title_error_dialog">Error al establecer conexión</string>
+    <string name="msg_config_dialog">Introducta la ip del servidor:</string>
+    <string name="title_config_dialog">Configurar IP del servidor</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="title_dialog_config">Configuración</string>
+</resources>

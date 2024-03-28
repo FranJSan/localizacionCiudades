@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_toolbar">#190732</color>
+    <color name="second_color">#182E5A</color>
+    <color name="bgMain">#190732</color>
+    <color name="bgItem">#2B0C55</color>
+    <color name="bgBtn">#08CAD1</color>
+    <color name="bg_btn_dialog">#09979C</color>
+    <color name="transparente">#00EEEEEE</color>
+    <color name="bgToolBar">#0E041C</color>
+
+</resources>
