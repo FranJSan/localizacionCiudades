@@ -29,8 +29,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="end"
-            android:src="@drawable/baseline_settings_applications_24"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/baseline_settings_applications_24" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -41,8 +41,8 @@
         android:gravity="center"
         android:text="@string/title"
         android:textColor="@color/primary_toolbar"
-        android:textStyle="bold"
         android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,13 +67,12 @@
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/primary_toolbar"
         android:gravity="center"
-        android:text="Buscar"
+        android:text="@string/text_btn_buscar"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/sv_input_ciudad"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
-
 
 
     <androidx.cardview.widget.CardView
@@ -100,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:text="DATOS"
+                android:text="@string/datos"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Población: "
+                    android:text="@string/tv_poblacion"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -149,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Latitud: "
+                    android:text="@string/tv_latitud"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Longitud: "
+                    android:text="@string/tv_longitud"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Codigo país: "
+                    android:text="@string/tv_codigo_pais"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -241,7 +240,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="@color/primary_toolbar"
-        android:text="Mostrar en mapa"
+        android:text="@string/text_btn_mostrar_mapa"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

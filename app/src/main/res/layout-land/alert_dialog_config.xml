@@ -23,7 +23,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="@string/title_dialog_config"
-            android:textColor="#CDE7FB"
+            android:textColor="@color/text_dialog"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
                 android:id="@+id/tv_estado2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Estado: "
+                android:text="@string/text_tv_estado"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -59,8 +59,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Fuente de datos"
-        android:textColor="#CDE7FB"
+        android:text="@string/text_tv_fuente_datos"
+        android:textColor="@color/text_dialog"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearAlert" />
@@ -79,20 +79,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
-            android:text="Git"
-            android:textColor="@color/white"
+            android:text="@string/text_tv_git"
+            android:textColor="@color/text_dialog"
             android:textSize="15sp"
-            app:buttonTint="@color/white" />
+            app:buttonTint="@color/text_dialog" />
 
         <RadioButton
             android:id="@+id/rb_custom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
-            android:text="Custom"
-            android:textColor="@color/white"
+            android:text="@string/text_tv_custom"
+            android:textColor="@color/text_dialog"
             android:textSize="15sp"
-            app:buttonTint="@color/white" />
+            app:buttonTint="@color/text_dialog" />
 
     </RadioGroup>
 
@@ -103,8 +103,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
-        android:text="Ip del servidor:"
-        android:textColor="#CDE7FB"
+        android:text="@string/text_tv_ip_server"
+        android:textColor="@color/text_dialog"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/tv_fuente_datos"
         app:layout_constraintTop_toBottomOf="@id/linearAlert" />
@@ -115,8 +115,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="10dp"
-        android:backgroundTint="#CDE7FB"
-        android:textColor="#CDE7FB"
+        android:backgroundTint="@color/text_dialog"
+        android:textColor="@color/text_dialog"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_fuente_datos"
@@ -129,8 +129,8 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:layout_marginStart="30dp"
-        android:text="Path del recurso:"
-        android:textColor="#CDE7FB"
+        android:text="@string/text_path"
+        android:textColor="@color/text_dialog"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/tv_fuente_datos"
         app:layout_constraintTop_toBottomOf="@id/etIP" />
@@ -141,8 +141,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="10dp"
-        android:backgroundTint="#CDE7FB"
-        android:textColor="#CDE7FB"
+        android:backgroundTint="@color/text_dialog"
+        android:textColor="@color/text_dialog"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_fuente_datos"
@@ -157,7 +157,7 @@
         android:layout_margin="10dp"
         android:backgroundTint="@color/primary_toolbar"
         android:text="@string/btn_cancelar"
-        android:textColor="#CDE7FB"
+        android:textColor="@color/text_dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnProbar"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,7 +170,7 @@
         android:layout_margin="10dp"
         android:backgroundTint="@color/primary_toolbar"
         android:text="@string/btn_aceptar"
-        android:textColor="#CDE7FB"
+        android:textColor="@color/text_dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btnProbar"
@@ -182,8 +182,8 @@
         android:layout_height="50dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
-        android:backgroundTint="#8590D8"
-        android:text="Probar"
+        android:backgroundTint="@color/bg_btn_probar"
+        android:text="@string/text_btn_probar"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"

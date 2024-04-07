@@ -9,4 +9,18 @@
     <string name="btn_aceptar">Aceptar</string>
     <string name="btn_cancelar">Cancelar</string>
     <string name="title_dialog_config">Configuración</string>
+    <string name="text_btn_buscar">Buscar</string>
+    <string name="datos">DATOS</string>
+    <string name="tv_poblacion">Población:</string>
+    <string name="tv_latitud">Latitud:</string>
+    <string name="tv_longitud">Longitud:</string>
+    <string name="tv_codigo_pais">Codigo país:</string>
+    <string name="text_btn_mostrar_mapa">Mostrar en mapa</string>
+    <string name="text_tv_estado">Estado:</string>
+    <string name="text_tv_fuente_datos">Fuente de datos</string>
+    <string name="text_tv_git">Git</string>
+    <string name="text_tv_custom">Custom</string>
+    <string name="text_tv_ip_server">Ip del servidor:</string>
+    <string name="text_path">Path del recurso:</string>
+    <string name="text_btn_probar">Probar</string>
 </resources>

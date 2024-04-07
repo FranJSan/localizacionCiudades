@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     private static Toast toast;
     private static HashMap<String, Ciudad> ciudades;
-    private SearchView svBuscar;
+    private static SearchView svBuscar;
     private ImageView ivConfig;
     private TextView tvNombre, tvPais, tvLatitud, tvLongitud;
     private Button btnBuscar, btnMostrarMapa;
-    private AdapterSearch adapterSearch;
+    private static AdapterSearch adapterSearch;
     private Ciudad selectedCity;
     private static Context context;
 
@@ -163,12 +163,14 @@ public class MainActivity extends AppCompatActivity {
                                 c.setCoord(new Coord(object.getDouble("lon"), object.getDouble("lat")));
                                 ciudades.put(c.getName().toLowerCase(), c);
                             }
+
                             Log.i("INFO", "Datos cargados correctamente.");
                             estado = AlertDialogCustom.Estado.DATOS_RECIBIDOS;
                             AlertDialogCustom.modificarEstado(AlertDialogCustom.Estado.DATOS_RECIBIDOS);
                         } catch (JSONException e) {
                             Log.e("ERROR", "Se ha producido un error durante el parseo de los datos.");
                             estado = AlertDialogCustom.Estado.NO_CONECTADO;
+                            ciudades.clear();
                             mostrarDialog();
                             throw new RuntimeException(e);
                         }
@@ -183,6 +185,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("ERROR", "Se ha producido un error en la repuesta del servidor.");
                 mostrarToast("Error al establecer la conexión", Toast.LENGTH_LONG);
                 estado = AlertDialogCustom.Estado.NO_CONECTADO;
+                ciudades.clear();
+                actualizarVectorSearchView();
                 mostrarDialog();
                 error.printStackTrace();
             }
@@ -295,19 +299,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapterSearch = new AdapterSearch(this, null);
 
-        /*
-        Para poder realizar las sugerencias, el SearchView realiza consultas a un cursor.
-        Aquí creo el cursor sobre el que luego se harán las consultas. Este cursor obligatoriamente
-        debe llevar una columna "_id" que, en este caso, toma el valor de id de la ciudad. La columna
-        "name" toma como valor el nombre.
-         */
-        MatrixCursor matrixCursor = new MatrixCursor(new String[]{"_id", "name"});
-        for (Ciudad c : ciudades.values()) {
-            matrixCursor.addRow(new String[]{String.valueOf(c.getId()), c.getName()});
-        }
-        // Se le pasa el cursor al adapter y el adapter al SearchView
-        adapterSearch.swapCursor(matrixCursor);
-        svBuscar.setSuggestionsAdapter(adapterSearch);
+        actualizarVectorSearchView();
 
         /*
         He intentado de mil maneras personalizar todos los colores del SearchView, pero no lo he consegido.
@@ -338,6 +330,22 @@ public class MainActivity extends AppCompatActivity {
             ImageView iconClose = findViewById(androidx.appcompat.R.id.search_close_btn);
             iconClose.setColorFilter(getResources().getColor(R.color.primary_toolbar, getTheme()));
         }
+    }
+
+    /**
+     * Para poder realizar las sugerencias, el SearchView realiza consultas a un cursor.
+     * Aquí creo el cursor sobre el que luego se harán las consultas. Este cursor obligatoriamente
+     * debe llevar una columna "_id" que, en este caso, toma el valor de id de la ciudad. La columna
+     * "name" toma como valor el nombre.
+     */
+    private static void actualizarVectorSearchView() {
+        MatrixCursor matrixCursor = new MatrixCursor(new String[]{"_id", "name"});
+        for (Ciudad c : ciudades.values()) {
+            matrixCursor.addRow(new String[]{String.valueOf(c.getId()), c.getName()});
+        }
+        // Se le pasa el cursor al adapter y el adapter al SearchView
+        adapterSearch.swapCursor(matrixCursor);
+        svBuscar.setSuggestionsAdapter(adapterSearch);
     }
 
     /**

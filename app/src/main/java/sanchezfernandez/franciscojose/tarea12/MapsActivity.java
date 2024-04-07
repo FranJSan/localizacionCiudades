@@ -4,11 +4,13 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import sanchezfernandez.franciscojose.tarea12.databinding.ActivityMapsBinding;
@@ -50,10 +52,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
         LatLng city = new LatLng(selectedCity.getCoord().getLat(), selectedCity.getCoord().getLon());
         mMap.addMarker(new MarkerOptions().position(city).title(selectedCity.getName()));
         // He modificado el zoom para que se acerque más la cámara
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(city, 10f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(city, 8f));
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(12f), 4000, null);
     }
 }

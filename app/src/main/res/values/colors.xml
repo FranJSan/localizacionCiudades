@@ -10,5 +10,8 @@
     <color name="bg_btn_dialog">#09979C</color>
     <color name="transparente">#00EEEEEE</color>
     <color name="bgToolBar">#0E041C</color>
+    <color name="bg_dialog">#4B2E73</color>
+    <color name="text_dialog">#CDE7FB</color>
+    <color name="bg_btn_probar">#8590D8</color>
 
 </resources>
